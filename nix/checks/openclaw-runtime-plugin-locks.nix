@@ -7,7 +7,9 @@
 let
   scriptsDir = ../scripts;
   generatedLocks = import ../generated/openclaw-runtime-plugins/default.nix;
-  generatedLocksJson = builtins.toFile "openclaw-runtime-plugin-locks.json" (builtins.toJSON generatedLocks);
+  generatedLocksJson = builtins.toFile "openclaw-runtime-plugin-locks.json" (
+    builtins.toJSON generatedLocks
+  );
 in
 stdenvNoCC.mkDerivation {
   pname = "openclaw-runtime-plugin-locks";

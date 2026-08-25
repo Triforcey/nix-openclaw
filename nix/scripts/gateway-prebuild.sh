@@ -64,6 +64,11 @@ fi
 
 log_step "chmod pnpm store writable" chmod -R +w "$store_path"
 
+if [ -f "$store_path/v11/index.db.sql" ]; then
+  sqlite3 "$store_path/v11/index.db" < "$store_path/v11/index.db.sql"
+  rm "$store_path/v11/index.db.sql"
+fi
+
 # pnpm --ignore-scripts marks tarball deps as "not built" and offline install
 # later refuses to use them; if a dep doesn't require build, promote it.
 log_step "promote pnpm integrity" "$PROMOTE_PNPM_INTEGRITY_SH" "$store_path"

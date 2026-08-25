@@ -16,6 +16,7 @@
   vips,
   git,
   zstd,
+  sqlite,
   sourceInfo,
   gatewaySrc ? null,
   pnpmDepsHash ? (sourceInfo.pnpmDepsHash or null),
@@ -42,6 +43,7 @@ let
           node-gyp
           git
           zstd
+          sqlite
           ;
       }
       {

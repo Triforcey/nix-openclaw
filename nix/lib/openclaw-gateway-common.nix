@@ -13,6 +13,7 @@
   node-gyp,
   git,
   zstd,
+  sqlite,
 }:
 
 # Shared build plumbing for OpenClaw gateway-related derivations.
@@ -176,6 +177,7 @@ in
     python3
     node-gyp
     zstd
+    sqlite
   ]
   ++ extraNativeBuildInputs;
 

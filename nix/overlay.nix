@@ -31,7 +31,10 @@ let
       inherit toolNamesOverride excludeToolNames;
     };
 in
-packages
+{
+  inherit (packages) openclaw openclaw-gateway openclawRuntimePlugins;
+}
+// (if packages ? openclaw-app then { inherit (packages) openclaw-app; } else { })
 // {
   openclawPackages = packages // {
     inherit toolNames withTools;
