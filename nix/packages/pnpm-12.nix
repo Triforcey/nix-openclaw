@@ -14,6 +14,10 @@ let
         package = "exe.darwin-arm64";
         hash = "sha256-nI4gCXq7OtTzC/oxw+WT016REfuGdaBq1rOR/N17yKA=";
       };
+      aarch64-linux = {
+        package = "exe.linux-arm64";
+        hash = "sha256-79UEsfvqNGHdoyIESBE3Q0VXz8HtcKsD8Nxvlt0r6EU=";
+      };
       x86_64-linux = {
         package = "exe.linux-x64";
         hash = "sha256-YU0YvcsSGoRMAmCzFddrc35oc0bAAbjgk/0KkyAsLWs=";
